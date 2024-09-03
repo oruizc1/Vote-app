@@ -46,4 +46,21 @@ contract Vote{
         sender.vote=index;
         proposals[index].votesCount += 1;
     }
+
+    function getChairPerson() public view returns(address) {
+        return chairperson;
+    }
+
+    function getLengthProposals() public view returns (uint256){
+        return proposals.length;
+    }
+
+    function getVotesById(uint index) public view returns (uint256){
+        return proposals[index].votesCount;
+    }
+
+    function getProposals() public view returns (Proposal[] memory){
+        return proposals;
+    }
+
 }
