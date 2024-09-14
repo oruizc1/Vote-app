@@ -22,6 +22,7 @@ describe("Deploy", function(){
         const chairperson = await vote.getChairPerson();
         expect(chairperson).to.equal(owner.address);
     })
+
     });
 
 describe("Add proposals", function(){
@@ -52,5 +53,6 @@ describe("vote",function(){
         await expect(vote.connect(addr1).vote(0)).to.be.revertedWith("Tu ya votaste")    
     })
 })
+
 
 });
